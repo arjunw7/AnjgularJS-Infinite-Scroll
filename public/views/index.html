@@ -1,0 +1,92 @@
+<!-- 
+Author: Arjun Wadhwa
+Author URL: www.facebook.com/cornifus
+Version: 1.0
+Description: 
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>Online Petetion</title>
+<meta name="author" content="Arjun Wadhwa"/>
+<meta name="description" content=""/>
+<meta name="viewport" content=" width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,700' rel='stylesheet' type='text/css'>
+ <link rel="icon" type="image/png" href="">
+</head>
+<body>
+	<div class="main" ng-controller="AppCtrl">
+		<div class="navigation">
+			<nav class="navbar navbar-inverse" data-spy="affix">
+			<div class="topBar"></div>
+			<div class="container-fluid">
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span> 
+			    	</button>
+			     	<a class="navbar-brand" href="#"><img src="../images/logo.png"></a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="myNavbar">
+			        <ul class="nav navbar-nav navbar-right">
+			        	<li><a href="#about">Search</a></li>
+			        	<li><a href="#services">About</a></li>
+			        	<li><a href="#csr">Contact</a></li>
+			        </ul>
+			    </div>
+			</div>
+			</nav>
+		</div>
+		<div class="home">
+			
+			<div class="col-md-4 left">
+				<div class="newPetetion">
+					<div class="container">
+						<div class="head">File new Petetion</div>
+						<form>
+							<label>Title*</label><br>
+							<input type="text" placeholder=""></input><br>
+							<label>Description*</label><br>
+							<textarea type="text" placeholder=""></textarea><br>
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="petetion row">
+					<div class="col-md-10">
+						<div class="pTitle">
+							Chennai Rains
+						</div>
+						<div class="pDescription">
+							The Heckscher-Ohlin theory has been one of the most influential theoretical ideas in international economics. Most economists prefer the Heckscher-Ohlin theory to Ricardo’s theory because it makes fewer simplifying assumptions. Because of its influence, the theory has been subjected to many empirical tests. 
+						</div>
+						<div class="count">
+							20 supporters
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="supportButton" valign="middle">
+							<button>Support Petetion</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="/controllers/controller.js"></script>
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.parallax-1.1.3.js"></script>
+<script src="/js/jquery.sticky.js"></script>
+<script src="/js/default.js"></script>
+</html>

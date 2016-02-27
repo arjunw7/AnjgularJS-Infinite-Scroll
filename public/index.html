@@ -1,0 +1,96 @@
+<!-- 
+Author: Arjun Wadhwa
+Author URL: www.facebook.com/cornifus
+Version: 1.0
+Description: 
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>Online Petetion</title>
+<meta name="author" content="Arjun Wadhwa"/>
+<meta name="description" content=""/>
+<meta name="viewport" content=" width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/animate.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,700' rel='stylesheet' type='text/css'>
+ <link rel="icon" type="image/png" href="">
+</head>
+<body>
+	<div class="main" ng-controller="AppCtrl">
+		<div class="navigation">
+			<nav class="navbar navbar-inverse" data-spy="affix">
+			<div class="topBar"></div>
+			<div class="container-fluid">
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span> 
+			    	</button>
+			     	<a class="navbar-brand" href="#"><img src="../images/logo.png"></a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="myNavbar">
+			        <ul class="nav navbar-nav navbar-right">
+			        	<li><a href="">More</a></li>
+			        	<li><a href="">About</a></li>
+			        	<li><a href="">Contact</a></li>
+			        </ul>
+			    </div>
+			</div>
+			</nav>
+		</div>
+		
+		<div class="row home" style="width: 100%; margin:0; padding:0">
+			<div class="col-md-4 col-xs-12 left">
+				<div class="newPetetion">
+					<div class="container">
+						<div class="head">File new Petetion</div>
+						<form >
+							<label>Title*</label><br>
+							<input ng-model="petetion.title" type="text" placeholder="" value="none"></input><br>
+							<label>Description*</label><br>
+							<textarea ng-model="petetion.description" type="text" placeholder=""></textarea><br>
+							<button class="sButton" ng-click="addPetetion()" type="submit">Submit</button>
+
+						</form>
+						<div class="success">Your Petetion has been posted successfully.</div>
+					</div>
+				</div>
+			</div>
+			<div class="right col-md-8 col-xs-12" infinite-scroll="refreshNow()">
+			<div  ng-repeat="petetion in petetions">
+				<div class="petetion row" >
+					<div class="col-md-10">
+						<div class="pTitle">
+							{{ petetion.title }}
+						</div>
+						<div class="pDescription">
+							{{ petetion.description }}
+						</div>
+						<div class="count">
+							{{ petetion.count }}
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="supportButton" valign="middle">
+							<button>Support Petetion</button>
+						</div>
+						<!-- <button class="del" ng-click="remove(petetion._id)">Delete</button> -->
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/ng-infinite-scroll.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/default.js"></script>
+</html>
