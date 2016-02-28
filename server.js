@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 
 var mongojs = require("mongojs");
-var db = mongojs('petetions',['petetions']);
+var db = mongojs('arjunw7:13bcb0062@ds019048.mlab.com:19048/heroku_s6qv8mb8', ['petetions']);
 
 var bodyParser = require("body-parser");
 
